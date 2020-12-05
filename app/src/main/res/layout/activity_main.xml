@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/coverImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc_cover_image"
+        app:layout_constraintBottom_toTopOf="@+id/statusView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cover_art" />
+
+    <TextView
+        android:id="@+id/statusView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_init"
+        app:layout_constraintBottom_toTopOf="@+id/controlHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coverImage" />
+
+    <LinearLayout
+        android:id="@+id/controlHolder"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/urlHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusView">
+
+        <ImageButton
+            android:id="@+id/playButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_play_button"
+            android:focusable="auto"
+            android:onClick="onClickPlay"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/media_controls_play_icon" />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_pause_button"
+            android:focusable="auto"
+            android:onClick="onClickPause"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/media_controls_pause_icon" />
+
+        <ImageButton
+            android:id="@+id/resumeButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_resume_button"
+            android:focusable="auto"
+            android:onClick="onClickResume"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/media_controls_resume_icon" />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_stop_button"
+            android:focusable="auto"
+            android:onClick="onClickStop"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/media_controls_stop_icon" />
+
+        <ImageButton
+            android:id="@+id/repeatButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_repeat_button"
+            android:focusable="auto"
+            android:onClick="onClickRepeat"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/media_controls_repeat_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/urlHolder"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controlHolder">
+
+        <EditText
+            android:id="@+id/streamText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:ems="10"
+            android:hint="@string/stream_hint"
+            android:inputType="textUri" />
+
+        <ImageButton
+            android:id="@+id/streamButton"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_stream_button"
+            android:focusable="auto"
+            android:onClick="onClickStream"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/media_controls_stream_icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MP3 Player</string>
+    <string name="status_init">Initializing...</string>
+    <string name="status_ready">Ready to Play</string>
+    <string name="status_playing">Playing MP3</string>
+    <string name="status_paused">Paused</string>
+    <string name="status_resumed">Play Resumed</string>
+    <string name="status_stopped">Playback Stopped</string>
+    <string name="status_repeat">Replaying MP3</string>
+    <string name="desc_cover_image">Album Cover Image</string>
+    <string name="desc_play_button">Play Button</string>
+    <string name="desc_pause_button">Pause Button</string>
+    <string name="desc_resume_button">Resume Button</string>
+    <string name="desc_stop_button">Stop Button</string>
+    <string name="desc_repeat_button">Repeat Button</string>
+    <string name="desc_stream_button">Stream Button</string>
+    <string name="stream_hint">Enter stream URL</string>
+</resources>
